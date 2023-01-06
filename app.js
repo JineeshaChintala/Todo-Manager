@@ -209,7 +209,7 @@ app.post("/users", async (request, response) => {
       }
     });
   } catch (error) {
-    request.flash("error", error.message);
+    request.flash("error", "Already account exists with this email");
     return response.redirect("/signup");
   }
 });
